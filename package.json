@@ -1,0 +1,37 @@
+{
+  "name": "@hobadams/swift-labels",
+  "author": {
+    "name": "Hob Adams",
+    "url": "https://hobadams.com"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "coverageDirectory": "coverage",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --minify --dts",
+    "release": "pnpm changeset version && pnpm changeset publish --access public",
+    "lint": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@changesets/cli": "^2.27.7",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "tsup": "^8.1.0",
+    "typescript": "^4.1.2"
+  }
+}
