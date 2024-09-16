@@ -2,15 +2,15 @@ import {getSwiftIsoLabel, Iso20022SchemaKey} from '../src/getSwiftIsoLabel'
 
 describe('getSwiftIsoLabel', () => {
   it('should return the correct abbreviation for a valid key', () => {
-    const key: Iso20022SchemaKey = 'Ability'
+    const key: Iso20022SchemaKey = 'Ablty'
     const result = getSwiftIsoLabel(key)
-    expect(result).toBe('Ablty')
+    expect(result).toBe('Ability')
   })
 
   it('should return the correct abbreviation for another valid key', () => {
-    const key: Iso20022SchemaKey = 'Abbreviated'
+    const key: Iso20022SchemaKey = 'Abbrvtd'
     const result = getSwiftIsoLabel(key)
-    expect(result).toBe('Abbrvtd')
+    expect(result).toBe('Abbreviated')
   })
 
   it('should return the key if it is not in the schema with a label', () => {
